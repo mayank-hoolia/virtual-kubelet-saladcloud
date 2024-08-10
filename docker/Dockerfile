@@ -17,6 +17,6 @@ COPY --from=build /etc/ssl/certs /etc/ssl/certs
 COPY --from=build /etc/ssl/cert.pem /etc/ssl/cert.pem
 COPY LICENSE /LICENSE
 COPY NOTICE /NOTICE
-COPY --from=build --chown=root:root /app/bin/virtual-kubelet /usr/bin/virtual-kubelet
+COPY --from=build /app/bin/virtual-kubelet /usr/bin/virtual-kubelet
 
 ENTRYPOINT ["/usr/bin/virtual-kubelet"]
